@@ -29,8 +29,8 @@ async function getAnimeData(type,param) {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        
-        return result.data ? result.data : [result];
+
+        return result;
     } catch (error) {
         console.error("Erreur lors de la récupération :", error);
     }

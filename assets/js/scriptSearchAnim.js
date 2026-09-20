@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!param) return;
 
-        renderCards(getAnimeData(type,param))
+        const data = await getAnimeData(type, param);
+        renderCards(data);
     });
 });
