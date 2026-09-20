@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Requester</title>
+</head>
+<body>
+
+<h1>ANIME RESQUESTER</h1>
+
+<form id="search-form">
+
+  <label>Rechercher par :</label>
+
+  <select name="requestType" id="search-type">
+    <option value="titre">Titre</option>
+    <option value="id">Identifiant</option>
+    <option value="classement">Classement</option>
+  </select>
+
+  <label>Paramètre :</label>
+  <input type="text" id="search-input">
+
+  <button type="submit">Rechercher</button>
+  <button type="reset">Effacer</button>
+
+</form>
+
+<section id="ressult-zone"></section>
+
+<script src="api/getAnimeData.js"></script>
+<script src="assets/js/scriptSearchAnim.js"></script>
+<script src="assets/js/renderer/cardsListRenderer.js"></script>
+</body>
+</html>
