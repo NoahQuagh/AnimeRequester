@@ -76,9 +76,6 @@ function validApiKey(){
     if(input.value===''){
         return;
     }
-    if(input.value==='debug'){//TODO a sup
-        closeModal('modalApiKey');
-    }
     sessionStorage.setItem('AnimeRequester-apiKey', input.value);
     closeModal('modalApiKey');
 }

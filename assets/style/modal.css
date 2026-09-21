@@ -57,7 +57,7 @@
     padding: 16px 20px;
     border-bottom: 1px solid var(--modal-header-border-color);
 
-    h3 {
+    h2 {
         margin: 0;
         font-family: var(--modal-font-family);
         font-weight: 500;
@@ -87,7 +87,7 @@
     font-size: var(--modal-text-size-base);
     line-height: 1.5;
 
-    h3{
+    p{
         color: white;
     }
 
@@ -135,6 +135,16 @@
     &:hover {
         background: var(--modal-bg-secondary);
     }
+}
+
+.btn-valid {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.modal-body p,
+label {
+    color: #ffffff;
 }
 
 .modal-box.is-closing {
