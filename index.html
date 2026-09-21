@@ -1,35 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Anime Requester</title>
+  <link rel="stylesheet" href="assets/style/styleAnimeRequest.css">
+  <link rel="stylesheet" href="assets/style/palette.css">
+  <link rel="stylesheet" href="assets/style/optionTheme.css">
+  <link rel="stylesheet" href="assets/style/modal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
 
 <h1>ANIME RESQUESTER</h1>
 
-<form id="search-form">
+<button id="theme-btn" aria-label="Changer le thème">
+  <i class="ti ti-moon" id="themeLight" aria-hidden="true"></i>
+</button>
 
-  <label>Rechercher par :</label>
+<main>
+  <form id="search-form">
 
-  <select name="requestType" id="search-type">
-    <option value="titre">Titre</option>
-    <option value="id">Identifiant</option>
-    <option value="classement">Classement</option>
-  </select>
+    <label for="search-type">Rechercher par :</label>
+    <select name="requestType" id="search-type">
+      <option value="titre">Titre</option>
+      <option value="id">Identifiant</option>
+      <option value="classement">Classement</option>
+      <option value="genre">Genre</option>
+    </select>
 
-  <label>Paramètre :</label>
-  <input type="text" id="search-input">
+    <label for="search-input" id="param-label">Paramètre :</label>
 
-  <button type="submit">Rechercher</button>
-  <button type="reset">Effacer</button>
+    <input type="text" id="search-input" name="searchInput">
 
-</form>
+    <div id="input-genre-container" style="display: none;">
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="genre" value="Award Winning">Award Winning</label>
+        <label><input type="checkbox" name="genre" value="Action">Action</label>
+        <label><input type="checkbox" name="genre" value="Suspense">Suspense</label>
+        <label><input type="checkbox" name="genre" value="Horror">Horror</label>
+        <label><input type="checkbox" name="genre" value="Ecchi">Ecchi</label>
+        <label><input type="checkbox" name="genre" value="Avant Garde">Avant Garde</label>
+        <label><input type="checkbox" name="genre" value="Sports">Sports</label>
+        <label><input type="checkbox" name="genre" value="Supernatural">Supernatural</label>
+        <label><input type="checkbox" name="genre" value="Fantasy">Fantasy</label>
+        <label><input type="checkbox" name="genre" value="Gourmet">Gourmet</label>
+        <label><input type="checkbox" name="genre" value="Boys Love">Boys Love</label>
+        <label><input type="checkbox" name="genre" value="Drama">Drama</label>
+        <label><input type="checkbox" name="genre" value="Comedy">Comedy</label>
+        <label><input type="checkbox" name="genre" value="Mystery">Mystery</label>
+        <label><input type="checkbox" name="genre" value="Girls Love">Girls Love</label>
+        <label><input type="checkbox" name="genre" value="Slice of Life">Slice of Life</label>
+        <label><input type="checkbox" name="genre" value="Adventure">Adventure</label>
+        <label><input type="checkbox" name="genre" value="Romance">Romance</label>
+        <label><input type="checkbox" name="genre" value="Sci-Fi">Sci-Fi</label>
+        <label><input type="checkbox" name="genre" value="Erotica">Erotica</label>
+        <label><input type="checkbox" name="genre" value="Hentai">Hentai</label>
+      </div>
+    </div>
 
-<section id="ressult-zone"></section>
+    <button type="submit"><i class="ti ti-search" aria-hidden="true"></i> Rechercher</button>
+    <button type="reset"><i class="ti ti-reload" aria-hidden="true"></i> Effacer</button>
 
-<script src="api/getAnimeData.js"></script>
-<script src="assets/js/scriptSearchAnim.js"></script>
-<script src="assets/js/renderer/cardsListRenderer.js"></script>
+  </form>
+</main>
+
+<div id="ressult-zone"></div>
+
+<div id="modalApiKey" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h3>Clé api nécessaire !</h3>
+    </div>
+
+    <div class="modal-body">
+      <h3>Entrez une clé api anime DB pour utiliser le moteur de recherche.</h3>
+      <form>
+        <label>Clé api :</label>
+        <input type="password" id="apiKeyInput">
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="modal-btn btn-valid" id="btn-valid-api">Valider</button>
+    </div>
+
+  </div>
+</div>
+
+
+<script type="module" src="assets/js/scriptSearchAnim.js" defer></script>
+<script src="assets/js/theme.js" defer></script>
+<script src="assets/js/modal.js" defer></script>
 </body>
 </html>

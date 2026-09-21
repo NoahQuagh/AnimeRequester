@@ -1,0 +1,42 @@
+:root {
+    --paper: #eef1f6;
+    --panel: #ffffff;
+    --ink: #1b1a3a;
+    --ink-soft: #55547a;
+    --red: #e8384f;
+    --yellow: #ffd23f;
+    --mint: #c9f0e1;
+
+    --line: 3px;
+    --shadow: 5px 5px 0 var(--ink);
+    --radius: 4px;
+
+    --font-display: "Dela Gothic One", "Arial Black", Impact, sans-serif;
+    --font-body: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Segoe UI", system-ui, sans-serif;
+}
+
+:root[data-theme="dark"] {
+    --paper: #12112a;
+    --panel: #1d1c3d;
+    --ink: #ece9ff;
+    --ink-soft: #a9a7d1;
+    --red: #ff5468;
+    --yellow: #c1a138;
+    --mint: #1e4a41;
+
+    --on-accent: #12112a;
+
+    --shadow: 5px 5px 0 var(--ink);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
