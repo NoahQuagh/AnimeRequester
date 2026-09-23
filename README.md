@@ -1,5 +1,7 @@
 # Anime Requester
 
+https://noahquagh.github.io/AnimeRequester/
+
 **Anime Requester** est une application web moderne et responsive permettant de rechercher des informations sur des animes en interrogeant l'API [Anime DB](https://rapidapi.com/dev132/api/anime-db) (via RapidAPI). 
 
 L'application offre une interface dynamique avec gestion de thème (Clair/Sombre), recherche multi-critères, et une fenêtre modale sécurisée pour la gestion de la clé d'API.
