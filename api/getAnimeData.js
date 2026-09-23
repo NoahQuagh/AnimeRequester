@@ -1,6 +1,3 @@
-const apiKey = sessionStorage.getItem('AnimeRequester-apiKey')
-
-
 /**
  * Effectue une recherche dans animeDB
  * @param type {'titre' | 'id' | 'classement' | 'genre'} [type='titre'] Le type de recherche
@@ -8,6 +5,7 @@ const apiKey = sessionStorage.getItem('AnimeRequester-apiKey')
  * @return {Promise<any>} json des cartes des animes
  */
 export async function getAnimeData(type,param) {
+    const apiKey = sessionStorage.getItem('AnimeRequester-apiKey')
     let url = '';
     if (type === 'titre') {
         url = `https://anime-db.p.rapidapi.com/anime?search=${encodeURIComponent(param)}&page=1&size=10`;
@@ -17,7 +15,7 @@ export async function getAnimeData(type,param) {
         url = `https://anime-db.p.rapidapi.com/anime?sortBy=ranking&sortOrder=asc&page=${param}&size=1`;
     }else{
         const genreList = Array.isArray(param) ? param.join(',') : param;
-        url = `https://anime-db.p.rapidapi.com/anime?genres=${encodeURIComponent(genreList)}&page=1&size=10`;
+        url = `https://anime-db.p.rapidapi.com/anime?genres=${encodeURIComponent(genreList)}&page=1&size=30`;
     }
 
 
