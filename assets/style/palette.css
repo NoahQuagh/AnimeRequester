@@ -1,42 +1,88 @@
 :root {
-    --paper: #eef1f6;
+    color-scheme: light;
+
+    --paper: #f2f0f8;
     --panel: #ffffff;
-    --ink: #1b1a3a;
-    --ink-soft: #55547a;
-    --red: #e8384f;
-    --yellow: #ffd23f;
-    --mint: #c9f0e1;
+    --placeholder: #dfe2f3;
 
-    --line: 3px;
-    --shadow: 5px 5px 0 var(--ink);
-    --radius: 4px;
+    --ink: #1c2150;
+    --ink-soft: #565b86;
 
-    --font-display: "Dela Gothic One", "Arial Black", Impact, sans-serif;
-    --font-body: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    --border: #d4d6ea;
+    --border-strong: #9a9ec8;
+
+    --accent: #3336d6;
+    --accent-strong: #2430b0;
+    --accent-ink: #ffffff;
+    --highlight: #f2b632;
+    --highlight-ink: #2a2008;
+    --tag: #dcefe4;
+    --tag-ink: #1d3b2c;
+
+    --glow: rgba(214, 51, 108, 0.09);
+    --shadow: 0 12px 28px -14px rgba(28, 33, 80, 0.35);
+    --radius: 14px;
+    --radius-sm: 10px;
+
+    --font-display: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+    --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Segoe UI", system-ui, sans-serif;
+
+    --red: var(--accent);
+    --yellow: var(--highlight);
+    --mint: var(--tag);
+    --on-accent: var(--ink);
+    --line: 1px;
 }
 
 :root[data-theme="dark"] {
-    --paper: #12112a;
-    --panel: #1d1c3d;
-    --ink: #ece9ff;
-    --ink-soft: #a9a7d1;
-    --red: #ff5468;
-    --yellow: #c1a138;
-    --mint: #1e4a41;
+    color-scheme: dark;
 
-    --on-accent: #12112a;
+    --paper: #0d0f2e;
+    --panel: #171a45;
+    --placeholder: #232757;
 
-    --shadow: 5px 5px 0 var(--ink);
+    --ink: #eceeff;
+    --ink-soft: #a6abd8;
+
+    --border: #2b3070;
+    --border-strong: #4d54a3;
+
+    --accent: #6b72ff;
+    --accent-strong: #8d8fff;
+    --accent-ink: #1d0a14;
+    --highlight: #f5c451;
+    --highlight-ink: #2a2008;
+    --tag: #1f4047;
+    --tag-ink: #d8f3ee;
+
+    --glow: rgba(255, 107, 154, 0.13);
+    --shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.7);
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    transition: all 0.4s ease;
 }
-
 
 html {
     -webkit-text-size-adjust: 100%;
+}
+
+body,
+#search-form,
+.card,
+#search-form select,
+#search-form input[type="text"] {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    #search-form,
+    .card,
+    #search-form select,
+    #search-form input[type="text"] {
+        transition: none;
+    }
 }

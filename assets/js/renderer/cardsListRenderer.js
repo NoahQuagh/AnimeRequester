@@ -6,13 +6,12 @@ export function renderCards(apiResponse) {
     const section = document.getElementById('ressult-zone');
 
     if (!apiResponse) {
-        section.innerHTML = "<p>Erreur ou aucune donnée reçue.</p>";
+        section.innerHTML = "<p>Aucun anime trouvé.</p>";
         return;
     }
 
     let animeList = [];
 
-    // Gestion des deux formats de Tenrai : tableau (recherche) ou objet unique (/anime/{id})
     if (apiResponse.data) {
         animeList = Array.isArray(apiResponse.data) ? apiResponse.data : [apiResponse.data];
     } else if (Array.isArray(apiResponse)) {
