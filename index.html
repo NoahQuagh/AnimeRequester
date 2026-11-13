@@ -36,30 +36,8 @@
 
     <input type="text" id="search-input" name="searchInput">
 
-    <div id="input-genre-container" style="display: none;">
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="genre" value="Award Winning">Award Winning</label>
-        <label><input type="checkbox" name="genre" value="Action">Action</label>
-        <label><input type="checkbox" name="genre" value="Suspense">Suspense</label>
-        <label><input type="checkbox" name="genre" value="Horror">Horror</label>
-        <label><input type="checkbox" name="genre" value="Ecchi">Ecchi</label>
-        <label><input type="checkbox" name="genre" value="Avant Garde">Avant Garde</label>
-        <label><input type="checkbox" name="genre" value="Sports">Sports</label>
-        <label><input type="checkbox" name="genre" value="Supernatural">Supernatural</label>
-        <label><input type="checkbox" name="genre" value="Fantasy">Fantasy</label>
-        <label><input type="checkbox" name="genre" value="Gourmet">Gourmet</label>
-        <label><input type="checkbox" name="genre" value="Boys Love">Boys Love</label>
-        <label><input type="checkbox" name="genre" value="Drama">Drama</label>
-        <label><input type="checkbox" name="genre" value="Comedy">Comedy</label>
-        <label><input type="checkbox" name="genre" value="Mystery">Mystery</label>
-        <label><input type="checkbox" name="genre" value="Girls Love">Girls Love</label>
-        <label><input type="checkbox" name="genre" value="Slice of Life">Slice of Life</label>
-        <label><input type="checkbox" name="genre" value="Adventure">Adventure</label>
-        <label><input type="checkbox" name="genre" value="Romance">Romance</label>
-        <label><input type="checkbox" name="genre" value="Sci-Fi">Sci-Fi</label>
-        <label><input type="checkbox" name="genre" value="Erotica">Erotica</label>
-        <label><input type="checkbox" name="genre" value="Hentai">Hentai</label>
-      </div>
+    <div id="genreList" style="display: none;">
+
     </div>
 
     <button type="submit"><i class="ti ti-search" aria-hidden="true"></i> Rechercher</button>
@@ -69,29 +47,6 @@
 </main>
 
 <div id="ressult-zone"></div>
-
-<div id="modalApiKey" class="modal-overlay" style="display: none;">
-  <div class="modal-box">
-
-    <div class="modal-header">
-      <h2>Clé api nécessaire !</h2>
-    </div>
-
-    <div class="modal-body">
-      <p>Entrez une clé api anime DB pour utiliser le moteur de recherche.</p>
-      <form>
-        <label for="apiKeyInput">Clé api :</label>
-        <input type="password" id="apiKeyInput" name="apiKeyInput">
-      </form>
-    </div>
-
-    <div class="modal-footer">
-      <button class="modal-btn btn-valid" id="btn-valid-api">Valider</button>
-    </div>
-
-  </div>
-</div>
-
 
 <script type="module" src="assets/js/scriptSearchAnim.js"></script>
 <script src="assets/js/theme.js" defer></script>
